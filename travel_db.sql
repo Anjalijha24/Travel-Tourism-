@@ -32,20 +32,6 @@ CREATE TABLE Flights (
     price DECIMAL(10, 2)
 );
 
--- Create Bookings Table
-CREATE TABLE Bookings (
-    booking_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    flight_id INT,
-    booking_date DATE,
-    destination VARCHAR(100),
-    departure VARCHAR(100),
-    arrival VARCHAR(100),
-    time TIME,
-    price DECIMAL(10, 2),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (flight_id) REFERENCES Flights(flight_id)
-);
 
 -- Create Hotels Table
 CREATE TABLE Hotels (
@@ -59,7 +45,7 @@ CREATE TABLE Hotels (
 
 -- Create HotelBookings Table
 CREATE TABLE HotelBookings (
-    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    accomodatiion_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     hotel_id INT,
     check_in_date DATE,
